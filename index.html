@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Florentin Corbiat — Portfolio</title>
+    <meta name="description" content="Portfolio léger de Florentin Corbiat — projets GitHub, compétences, contact." />
+    <meta name="color-scheme" content="light" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="identity">
+          <p class="name">Florentin Corbiat</p>
+          <p class="role" data-i18n="role">Développeur</p>
+          <p class="meta" data-i18n="location">France</p>
+          <a class="meta" id="emailLink" href="mailto:votre@email.com">florentin.corbiat@yahoo.fr</a>
+        </div>
+
+        <nav class="nav">
+          <a href="#about"><span class="index">01</span> <span data-i18n="nav_about">Qui je suis</span></a>
+          <a href="#projects"><span class="index">02</span> <span data-i18n="nav_projects">Projets</span></a>
+          <a href="#skills"><span class="index">03</span> <span data-i18n="nav_skills">Compétences</span></a>
+          <a href="#contact"><span class="index">04</span> <span data-i18n="nav_contact">Contact</span></a>
+        </nav>
+
+        <div class="sidebar-links">
+          <a href="https://github.com/CorbiatFlorentin" target="_blank" rel="noreferrer">GitHub</a>
+          <button class="lang" id="langToggle" aria-label="Changer de langue">FR/EN</button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <section class="intro">
+          <p class="lead" data-i18n="hero_title">
+            Spécialisé dans des expériences web sobres, rapides et soignées.
+          </p>
+          <p class="intro-text" data-i18n="hero_text">
+            Je collabore avec des équipes qui valorisent la clarté, la cohérence et la qualité d'exécution.
+          </p>
+          <p class="intro-text" data-i18n="hero_text2">
+            Je livre des interfaces précises en soignant la performance et les détails.
+          </p>
+        </section>
+
+        <section class="section" id="about">
+          <div class="section-label">
+            <span class="index">01</span>
+            <span data-i18n="nav_about">Qui je suis</span>
+          </div>
+          <p class="section-text" data-i18n="about_body">
+            Développeur curieux, je privilégie la simplicité, la lisibilité et la performance.
+          </p>
+          <div class="mini-block">
+            <p class="mini-title" data-i18n="availability_title">Disponibilité</p>
+            <p class="mini-value" data-i18n="availability_value">Disponible dès maintenant — Remote</p>
+          </div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-label">
+            <span class="index">02</span>
+            <span data-i18n="projects_title">Projets Récents</span>
+            <span class="count" id="repoCount">—</span>
+          </div>
+          <p class="section-text" data-i18n="projects_sub">Projets</p>
+          <p class="category" data-i18n="projects_category">Sélection</p>
+          <ul id="projectsList" class="list"></ul>
+          <p id="projectsEmpty" class="muted" data-i18n="projects_empty" hidden>
+            Aucun projet public trouvé pour le moment.
+          </p>
+        </section>
+
+        <section class="section" id="skills">
+          <div class="section-label">
+            <span class="index">03</span>
+            <span data-i18n="skills_title">Compétences</span>
+          </div>
+          <p class="section-text" data-i18n="skills_sub">Focus sur la qualité, la clarté et la performance.</p>
+          <p class="category" data-i18n="skills_category">Services</p>
+          <ul id="skillsList" class="list compact"></ul>
+        </section>
+
+        <section class="section" id="contact">
+          <div class="section-label">
+            <span class="index">04</span>
+            <span data-i18n="contact_title">Contact</span>
+          </div>
+          <p class="section-text" data-i18n="contact_sub">Simple, direct, sans surcharge.</p>
+          <form class="contact" id="contactForm">
+            <label>
+              <span data-i18n="form_name">Nom</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              <span data-i18n="form_message">Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="cta" data-i18n="form_send">Envoyer</button>
+            <p class="muted" data-i18n="form_hint">
+              Ce formulaire envoie un email directement (backend sécurisé).
+            </p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <footer class="container footer">
+      <span>© <span id="year"></span> Florentin Corbiat</span>
+      <span class="muted" data-i18n="footer_note">Conçu pour être rapide et léger.</span>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
+
+
+
+
